@@ -1,6 +1,6 @@
 package code;
 
-public class Sort {
+public class Quick_Sort {
 	static int count;
 
 	public static void quick_sort(int[] nums, int low, int high) {
