@@ -2,11 +2,11 @@ package satck_and_queue;
 
 import java.util.Stack;
 
-public class TwoStackToQueue {
+public class TwoStackToQueue_2 {
 	Stack<Integer> stack1;
 	Stack<Integer> stack2;
 	
-	public TwoStackToQueue() {
+	public TwoStackToQueue_2() {
 		this.stack1= new Stack<>();
 		this.stack2 = new Stack<>();
 	}
@@ -47,7 +47,7 @@ public class TwoStackToQueue {
 		
 	}
 	public static void main(String[] args) {
-		TwoStackToQueue que = new TwoStackToQueue();
+		TwoStackToQueue_2 que = new TwoStackToQueue_2();
 		que.add(2);
 		que.add(3);
 		System.out.println(que.poll());//2
