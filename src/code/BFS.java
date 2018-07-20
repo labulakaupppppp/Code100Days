@@ -30,7 +30,7 @@ public class BFS {
 	}
 
 	public static void main(String[] args) {
-		//����ͼ
+		//无向图
 		HashMap<Character, LinkedList<Character>> graph = new HashMap<>();
 		LinkedList<Character> a1 = new LinkedList<>();
 		a1.add('2');
