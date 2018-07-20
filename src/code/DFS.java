@@ -4,12 +4,12 @@ import java.util.LinkedList;
 import java.util.HashMap;
 
 public class DFS {
-	// Í¨¹ıcount À´¼ÇÂ¼½øÈëÓëÀë¿ªÃ¿¸ö½ÚµãµÄÊ±¼ä
+	// ç”¨ä¸€ä¸ªé™æ€å˜é‡countè®°å½•è¿›å…¥èŠ‚ç‚¹ ä¸ ç¦»å¼€èŠ‚ç‚¹çš„æ—¶é—´
 	static int count;
 
 	public static void dfs(HashMap<Character, LinkedList<Character>> graph, HashMap<Character, Boolean> visited,
 			char start) {
-		// Î´·ÃÎÊ¹ı£¬²Å½øĞĞÏÂÃæµÄ²½Öè
+		// æœªè®¿é—®è¿‡æ‰èƒ½è¿›è¡Œä¸‹ä¸€æ­¥
 		if (!visited.containsKey(start)) {
 			count++;
 			System.out.println("The time into element " + start + ":" + count);
@@ -26,7 +26,7 @@ public class DFS {
 	}
 
 	public static void main(String[] args) {
-		//ÎŞÏòÍ¼
+		//æ— å‘å›¾
 		HashMap<Character, LinkedList<Character>> graph = new HashMap<>();
 		LinkedList<Character> a1 = new LinkedList<>();
 		a1.add('2');
@@ -53,7 +53,7 @@ public class DFS {
 		char start = '1';
 		dfs(graph, visit, start);
 		System.out.println("==============");
-		// ½¨ÔìÒ»¸öÓĞÏòÍ¼£º
+		// æœ‰å‘å›¾
 		HashMap<Character, LinkedList<Character>> graph_v = new HashMap<>();
 		LinkedList<Character> a1_v = new LinkedList<>();
 		a1_v.add('2');

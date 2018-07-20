@@ -6,7 +6,7 @@ import java.util.Queue;
 
 //2018  7 18
 public class BFS {
-	// ¹ã¶ÈÓÅÏÈ
+	// å¹¿åº¦ä¼˜å…ˆ
 	public static void bfs(HashMap<Character, LinkedList<Character>> graph, HashMap<Character, Integer> dist,
 			char start) {
 		Queue<Character> queue = new LinkedList<>();
@@ -30,7 +30,7 @@ public class BFS {
 	}
 
 	public static void main(String[] args) {
-		//ÎŞÏòÍ¼
+		//ï¿½ï¿½ï¿½ï¿½Í¼
 		HashMap<Character, LinkedList<Character>> graph = new HashMap<>();
 		LinkedList<Character> a1 = new LinkedList<>();
 		a1.add('2');

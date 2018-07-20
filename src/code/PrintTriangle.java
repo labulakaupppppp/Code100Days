@@ -2,6 +2,8 @@ package code;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
+import structure.TreePoint;
 //2018 . 7 . 18
 public class PrintTriangle {
 	public static void printKK(int[][] nums, int row, int rows, int col, int cols) {
