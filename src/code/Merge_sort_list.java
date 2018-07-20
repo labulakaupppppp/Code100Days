@@ -10,7 +10,6 @@ public class Merge_sort_list {
 			merge_sort(nums, low, mid, ans);
 			merge_sort(nums, mid + 1, high, ans);
 			merge(nums, low, mid, high, ans);
-
 		}
 	}
 
