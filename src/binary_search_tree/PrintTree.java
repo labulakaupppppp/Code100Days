@@ -34,6 +34,29 @@ public class PrintTree {
 		System.out.println("递归的后序遍历");
 		posOrderRecur(head);
 		System.out.println();
+		System.out.println("非递归的后序遍历");
+		posOrderUnRecur(head);
+		System.out.println();
+	}
+
+	private static void posOrderUnRecur(TreeNode head) {
+		Stack<TreeNode> stack1 = new Stack<TreeNode>();
+		Stack<TreeNode> stack2 = new Stack<TreeNode>();
+		TreeNode cur= head;
+		stack1.push(cur);
+		while(!stack1.isEmpty()){
+			TreeNode temp=stack1.pop();
+			stack2.push(temp);
+			if(temp.left!=null)
+				stack1.push(temp.left);
+			if(temp.right!=null){
+				stack1.push(temp.right);
+			}
+		}
+		while(!stack2.isEmpty()){
+			System.out.print(stack2.pop().val+" ");
+		}
+
 	}
 
 	private static void inOrderUnRecur(TreeNode head) {
