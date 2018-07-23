@@ -2,7 +2,7 @@ package satck_and_queue;
 
 import java.util.Stack;
 
-public class Reverse_A_Stack {
+public class Reverse_A_Stack_3 {
 	public static int getAndRemoveLastElement(Stack<Integer> stack) {
 		int result = stack.pop();
 		if (stack.isEmpty()) {
