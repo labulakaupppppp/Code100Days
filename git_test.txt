@@ -4,3 +4,4 @@ git checkout master(在master分支上做的修改）
 =======
 
 >>>>>>> dev1
+ --no-ff
