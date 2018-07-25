@@ -52,7 +52,10 @@ public class DogCatQueue_4  {
 
 	public Cat pollCat() {
 		if (!this.isCatEmpty()) {
-			System.out.println(this.catQ.poll().getPet() instanceof Pet);
+			System.out.print("is a pet?");
+			System.out.println(this.catQ.peek().getPet() instanceof Pet);
+			System.out.print("is a cat?");
+			System.out.println(this.catQ.poll().getPet() instanceof Cat);
 //			if(this.catQ.poll().getPet() instanceof Pet) {
 //				return (Cat) this.catQ.poll().getPet();
 //			}else {
