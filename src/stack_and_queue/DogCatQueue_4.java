@@ -2,9 +2,9 @@ package stack_and_queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
+//未解决
 
-
-public class DogCatQueue_4 {
+public class DogCatQueue_4  {
 //实现add，pollAll，pollCat，pollDog，isEmpty，isDogEmpty，isCatEmpty
 	private Queue<PetEnterQueue_4> catQ;
 	private Queue<PetEnterQueue_4> dogQ;
@@ -77,16 +77,12 @@ public class DogCatQueue_4 {
 	}
 
 	public static void main(String[] args) {
-		Pet pet = new Pet("cat");
-		Pet pet1 = new Pet("cat");
-		Pet pet2 = new Pet("dog");
-		Pet pet3 = new Pet("cat");
-		Pet pet4 = new Pet("dog");
-		Pet pet5 = new Pet("cat");
-		Pet pet6 = new Pet("dog");
-		Pet pet7 = new Pet("cat");
-		Pet pet8 = new Pet("cat");
-		Pet pet9 = new Pet("cat");
+		Pet pet = new Cat();
+		Pet pet1 = new Cat();
+		Pet pet2 = new Dog();
+		Pet pet3 = new Cat();
+		Pet pet4 = new Dog();
+		Pet pet5 = new Cat();
 		DogCatQueue_4 ans = new DogCatQueue_4();
 		ans.add(pet);
 		ans.add(pet1);
