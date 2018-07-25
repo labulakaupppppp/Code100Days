@@ -4,7 +4,7 @@ import java.util.Stack;
 
 import structure.TreeNode;
 
-public class PrintTree {
+public class PrintTree_1 {
 	public static void main(String[] args) {
 		TreeNode head = new TreeNode(1);
 		TreeNode h1 = new TreeNode(2);
