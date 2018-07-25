@@ -2,7 +2,7 @@ package stack_and_queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
-//未解决
+
 
 public class DogCatQueue_4  {
 //实现add，pollAll，pollCat，pollDog，isEmpty，isDogEmpty，isCatEmpty
