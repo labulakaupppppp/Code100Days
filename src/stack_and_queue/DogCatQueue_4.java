@@ -77,6 +77,7 @@ public class DogCatQueue_4  {
 	}
 
 	public static void main(String[] args) {
+		//写main函数 也长点脑子 好么！！！！你放进来的 就是不对的 ，人家怎么给你返回对的。哼！
 		Pet pet = new Cat();
 		Pet pet1 = new Cat();
 		Pet pet2 = new Dog();
