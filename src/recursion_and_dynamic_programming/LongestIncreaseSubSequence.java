@@ -21,9 +21,9 @@ public class LongestIncreaseSubSequence {
 	public static int[] getIncreaceSubSequence(int[] arr, int[] dp) {
 		// 先找到dp数组中的最大值，代表了最长的递增子序列长度
 		int index = 0;
-		int len = dp[0];
+		int len = 0;
 		for (int i = 0; i < dp.length; i++) {
-			if (dp[i] >= len) {
+			if (dp[i] > len) {
 				len = dp[i];
 				index = i;// arr中下标
 			}
@@ -70,18 +70,22 @@ public class LongestIncreaseSubSequence {
 			low = 0;
 			high = right;
 			// 二分查找需要将arr[i]插入的位置
-			while (low < high) {
+			while (low <= high) {
 				mid = low + (high - low) / 2;
 				if (arr[i] > ends[mid]) {
 					low = mid + 1;
 				} else {
-					high = mid ;
+					high = mid-1 ;
 				}
 			}
-			right = Math.max(right, high);
-			ends[high] = arr[i];
-			dp[i] = high + 1;
-
+//			System.out.println("right:"+right+" high:"+high);
+			right = Math.max(right, low);
+			//System.out.println("max right:"+right);
+			//System.out.println("i:"+i+" high:"+high);
+			ends[low] = arr[i];
+			//System.out.println("ends[right]:"+ends[right]);
+			//System.out.println();
+			dp[i] = low + 1;
 		}
 		return dp;
 	}
@@ -90,7 +94,6 @@ public class LongestIncreaseSubSequence {
 		if (arr.length == 0 || arr == null)
 			return null;
 		int[] dp = getdp2(arr);
-		int[] ans = getIncreaceSubSequence(arr, dp);
-		return ans;
+		return getIncreaceSubSequence(arr, dp);
 	}
 }
