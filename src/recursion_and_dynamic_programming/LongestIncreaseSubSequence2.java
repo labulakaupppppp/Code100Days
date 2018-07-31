@@ -41,10 +41,7 @@ public class LongestIncreaseSubSequence2 {
 		int[] arr = { 2, 1, 3, 5, 4, 6, 8, 9, 7 };
 		int ans = lengthOfLIS(arr);
 		System.out.println("length:" + ans);
-		System.out.println("!!!!!!!!1");
-		int[] arr1 = { 2, 1, 3, 5, 4, 6, 8, 9, 7 };
-		int ans1 = lengthOfLIS1(arr1);
-		System.out.println("length:" + ans1);
+		
 		
 	}
 
