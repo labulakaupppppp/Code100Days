@@ -2,6 +2,7 @@ package stack_and_queue;
 
 import java.util.Stack;
 import stack_and_queue.*;
+import structure.Print;
 
 public class SortStackByStack_5 {
 
@@ -26,8 +27,7 @@ public class SortStackByStack_5 {
 		stack.push(2);
 		stack.push(3);
 		sort_by_stack(stack);
-		Common com = new Common();
 
-		com.print(stack);
+		Print.printStack((stack));
 	}
 }
