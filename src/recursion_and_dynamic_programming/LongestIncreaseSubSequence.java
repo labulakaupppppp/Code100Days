@@ -48,15 +48,7 @@ public class LongestIncreaseSubSequence {
 		return ans;
 	}
 
-	public static void main(String[] args) {
-		int[] arr = { 2, 1, 3, 5, 4, 6, 8, 9, 7 };
-		int[] ans = op1(arr);
-		System.out.println("op1" + Arrays.toString(ans));
-		int[] arr1 = { 2, 1, 3, 5, 4, 6, 8, 9, 7 };
-		int[] ans1 = op2(arr1);
-		System.out.println("op2" + Arrays.toString(ans1));
-	}
-
+	
 	public static int[] getdp2(int[] arr) {
 		int[] dp = new int[arr.length];
 		int[] ends = new int[arr.length];// 保存递增序列最小结尾数序列
@@ -96,4 +88,14 @@ public class LongestIncreaseSubSequence {
 		int[] dp = getdp2(arr);
 		return getIncreaceSubSequence(arr, dp);
 	}
+	
+	public static void main(String[] args) {
+		int[] arr = { 2, 1, 3, 5, 4, 6, 8, 9, 7 };
+		int[] ans = op1(arr);
+		System.out.println("op1" + Arrays.toString(ans));
+		int[] arr1 = { 1,3,4,5,2,-1,4,8,2,9};
+		int[] ans1 = op2(arr1);
+		System.out.println("op2" + Arrays.toString(ans1));
+	}
+
 }
