@@ -33,7 +33,14 @@ public class CrossingLinklist {
 		}
 		return slow;
 	}
-
+/**
+ * 两个无环链表相交问题解决方案：
+ * 1.求两个链表长度 ，相对长的先走差的距离然后一起走，遇到第一个相同节点即为交点
+ * 2.将第一个链表的最后一个节点连接到第二个链表的头，转换为求第一个链表的入环节点问题。
+ * @param head1
+ * @param head2
+ * @return
+ */
 	public static ListNode noLoop(ListNode head1, ListNode head2) {
 		ListNode cur1 = head1;
 		ListNode cur2 = head2;
