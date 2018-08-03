@@ -35,28 +35,53 @@ public class PrintTree_1 {
 		posOrderRecur(head);
 		System.out.println();
 		System.out.println("非递归的后序遍历");
-		posOrderUnRecur(head);
+		posOrderUnRecur2(head);
 		System.out.println();
 	}
 
 	private static void posOrderUnRecur(TreeNode head) {
 		Stack<TreeNode> stack1 = new Stack<TreeNode>();
 		Stack<TreeNode> stack2 = new Stack<TreeNode>();
-		TreeNode cur= head;
+		TreeNode cur = head;
 		stack1.push(cur);
-		while(!stack1.isEmpty()){
-			TreeNode temp=stack1.pop();
+		while (!stack1.isEmpty()) {
+			TreeNode temp = stack1.pop();
 			stack2.push(temp);
-			if(temp.left!=null)
+			if (temp.left != null)
 				stack1.push(temp.left);
-			if(temp.right!=null){
+			if (temp.right != null) {
 				stack1.push(temp.right);
 			}
 		}
-		while(!stack2.isEmpty()){
-			System.out.print(stack2.pop().val+" ");
+		while (!stack2.isEmpty()) {
+			System.out.print(stack2.pop().val + " ");
 		}
 
+	}
+
+	/**
+	 * 后序遍历的非递归：使用一个栈以及两个变量 ;h代表最后一次弹出并打印的节点
+	 * 
+	 */
+	private static void posOrderUnRecur2(TreeNode head) {
+		System.out.println("pos order: one stack");
+		if (head != null) {
+			Stack<TreeNode> stack = new Stack<>();
+			TreeNode cur =null;
+			stack.push(head);
+			while(!stack.isEmpty()) {
+				cur=stack.peek();
+				if(cur.left!=null && head!=cur.left && head!=cur.right) {
+					stack.push(cur.left);
+				}else if(cur.right!=null && head!=cur.right) {
+					stack.push(cur.right);
+				}else {
+					System.out.print(stack.pop().val+" ");
+					head=cur;
+				}
+			}
+			
+		}
 	}
 
 	private static void inOrderUnRecur(TreeNode head) {
