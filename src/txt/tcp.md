@@ -1,7 +1,7 @@
 ## TCP 的特性
-https://hit-alibaba.github.io/interview/basic/network/TCP.html
+[指南](https://hit-alibaba.github.io/interview/basic/network/TCP.html)
 * TCP 提供一种面向连接的、可靠的字节流服务
-*  在一个 TCP 连接中，仅有两方进行彼此通信。广播和多播不能用于 TCP
+*   在一个 TCP 连接中，仅有两方进行彼此通信。广播和多播不能用于 TCP
 * TCP 使用校验和，确认和重传机制来保证可靠传输
 * TCP 给数据分节进行排序，并使用累积确认保证数据的顺序不变和非重复
 * TCP 使用滑动窗口机制来实现流量控制，通过动态改变窗口的大小进行拥塞控制
@@ -9,7 +9,7 @@ https://hit-alibaba.github.io/interview/basic/network/TCP.html
 如果有可能，就把数据递送到接收方，否则就（通过放弃重传并且中断连接这一手段）通知用户。
 因此准确说 TCP 也不是 100% 可靠的协议，它所能提供的是数据的可靠递送或故障的可靠通知。
 
-三次握手与四次挥手
+## 三次握手与四次挥手
 所谓三次握手(Three-way Handshake)，是指建立一个 TCP 连接时，需要客户端和服务器总共发送3个包。
 
 三次握手的目的是连接服务器指定端口，建立 TCP 连接，并同步连接双方的序列号和确认号，交换 TCP 窗口大小信息。在 socket 编程中，客户端执行 connect() 时。将触发三次握手。
@@ -29,6 +29,7 @@ https://hit-alibaba.github.io/interview/basic/network/TCP.html
 客户端再次发送确认包(ACK)，SYN 标志位为0，ACK 标志位为1，并且把服务器发来 ACK 的序号字段+1，放在确定字段中发送给对方，并且在数据段放写ISN的+1
 
 发送完毕后，客户端进入 ESTABLISHED 状态，当服务器端接收到这个包时，也进入 ESTABLISHED 状态，TCP 握手结束。
+***
 TCP 的连接的拆除需要发送四个包，因此称为四次挥手(Four-way handshake)，也叫做改进的三次握手。客户端或服务器均可主动发起挥手动作，在 socket 编程中，任何一方执行 close() 操作即可产生挥手操作。
 
 第一次挥手(FIN=1，seq=x)
@@ -57,7 +58,7 @@ TCP 的连接的拆除需要发送四个包，因此称为四次挥手(Four-way 
 
 客户端等待了某个固定时间（两个最大段生命周期，2MSL，2 Maximum Segment Lifetime）之后，没有收到服务器端的 ACK ，认为服务器端已经正常关闭连接，于是自己也关闭连接，进入 CLOSED 状态。
 
-SYN攻击
+## SYN攻击
 什么是 SYN 攻击（SYN Flood）？
 
 在三次握手过程中，服务器发送 SYN-ACK 之后，收到客户端的 ACK 之前的 TCP 连接称为半连接(half-open connect)。此时服务器处于 SYN_RCVD 状态。当收到 ACK 后，服务器才能转入 ESTABLISHED 状态.
@@ -66,11 +67,11 @@ SYN 攻击指的是，攻击客户端在短时间内伪造大量不存在的IP�
 
 SYN 攻击是一种典型的 DoS/DDoS 攻击。
 
-如何检测 SYN 攻击？
+#### 如何检测 SYN 攻击？
 
 检测 SYN 攻击非常的方便，当你在服务器上看到大量的半连接状态时，特别是源IP地址是随机的，基本上可以断定这是一次SYN攻击。在 Linux/Unix 上可以使用系统自带的 netstats 命令来检测 SYN 攻击。
 
-如何防御 SYN 攻击？
+#### 如何防御 SYN 攻击？
 
 SYN攻击不能完全被阻止，除非将TCP协议重新设计。我们所做的是尽可能的减轻SYN攻击的危害，常见的防御 SYN 攻击的方法有如下几种：
 
