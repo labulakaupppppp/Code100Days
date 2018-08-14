@@ -17,7 +17,7 @@ public class Candy {
 		Scanner sc = new Scanner(System.in);
 		String ans=sc.nextLine();
 		String[] kid=ans.split(",");
-		System.out.println(kid[0]);
+		//System.out.println(kid[0]);
 		int[] kids=new int[kid.length];
 		for(int i=0;i<kid.length;i++) {
 			kids[i]=Integer.parseInt(kid[i]);
