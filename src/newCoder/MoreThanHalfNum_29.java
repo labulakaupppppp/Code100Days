@@ -1,6 +1,6 @@
 package newCoder;
 
-public class MoreThanHalfNum {
+public class MoreThanHalfNum_29 {
 	/**
 	 * 剑指offer 29题
 	 * @param nums

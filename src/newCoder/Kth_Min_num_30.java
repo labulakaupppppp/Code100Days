@@ -1,8 +1,8 @@
 package newCoder;
-//剑指offer29
+//剑指offer 30
 import java.util.ArrayList;
 
-public class Kth_Min_num {
+public class Kth_Min_num_30 {
 	// 输入n个整数，找出其中最小的K个数。例如输入4,5,1,6,2,7,3,8这8个数字，
 	// 则最小的4个数字是1,2,3,4,。
 	public static ArrayList<Integer> get_kth_min_nums(int[] nums, int k) {

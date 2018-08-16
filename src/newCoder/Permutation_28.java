@@ -3,7 +3,7 @@ package newCoder;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Permutation {
+public class Permutation_28 {
 /**
  * 输入一个字符串,按字典序打印出该字符串中字符的所有排列。
  * 例如输入字符串abc,则打印出由字符a,b,c
