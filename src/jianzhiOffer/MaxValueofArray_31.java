@@ -1,4 +1,4 @@
-package newCoder;
+package jianzhiOffer;
 //剑指offer 30
 public class MaxValueofArray_31 {
 	/**

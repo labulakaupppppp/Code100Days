@@ -1,4 +1,4 @@
-package newCoder;
+package jianzhiOffer;
 
 public class MoreThanHalfNum_29 {
 	/**

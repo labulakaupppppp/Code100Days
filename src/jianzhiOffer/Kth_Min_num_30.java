@@ -1,4 +1,4 @@
-package newCoder;
+package jianzhiOffer;
 //剑指offer 30
 import java.util.ArrayList;
 

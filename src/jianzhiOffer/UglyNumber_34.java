@@ -1,4 +1,4 @@
-package newCoder;
+package jianzhiOffer;
 
 /**
  * 把只包含质因子2、3和5的数称作丑数（Ugly Number）。 例如6、8都是丑数，但14不是，因为它包含质因子7。
@@ -7,7 +7,7 @@ package newCoder;
  * @author miaoyumiao_i
  *
  */
-public class UglyNumber {
+public class UglyNumber_34 {
 //按照自然数的顺序计算每一个数字是不是丑数，如果某数能被2整除就一直除2，能被3、5整除就一直除3、5.
 //最后剩下的数字变为1 即为丑数
 	// 该种算法 即使不是丑数也需要计算，超时。
