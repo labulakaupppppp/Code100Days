@@ -13,7 +13,6 @@ public class FindFirstCommonNode_37 {
 			count++;
 		}
 		ListNode temp2 = pHead2;
-		int len2 = 0;
 		while (temp2 != null) {
 			temp2 = temp2.next;
 			count--;
