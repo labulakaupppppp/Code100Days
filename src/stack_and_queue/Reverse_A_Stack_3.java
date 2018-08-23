@@ -41,5 +41,8 @@ public class Reverse_A_Stack_3 {
 		stack.push(7);
 		reverse(stack);
 		print(stack);
+		System.out.println("~~~~~~~~~~``");
+		Integer res =30 / 60 ;
+        System.out.println(res);
 	}
 }
