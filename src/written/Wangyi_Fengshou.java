@@ -1,8 +1,8 @@
-package code;
+package written;
 
 import java.util.Scanner;
 
-public class Fengshou {
+public class Wangyi_Fengshou {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();// 列数

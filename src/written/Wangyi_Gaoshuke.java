@@ -1,8 +1,8 @@
-package code;
+package written;
 
 import java.util.Scanner;
 
-public class Gaoshuke {
+public class Wangyi_Gaoshuke {
 public static void main(String[] args) {
 	 Scanner scanner = new Scanner(System.in);
      int n = scanner.nextInt();

@@ -1,9 +1,9 @@
-package code;
+package written;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class XiaoYi_eluosi {
+public class Wangyi_eluosi {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

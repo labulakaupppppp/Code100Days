@@ -1,8 +1,8 @@
-package code;
+package written;
 
 import java.util.*;
 
-public class Candy {
+public class Ali_Candy {
 	/**
 	 * 现在很多家长都会送小孩子去培训中心学习舞蹈，有一次舞蹈培训中心考试，
 	 * 因为小孩子要哄着才能更喜欢学，所以老师给孩子们准备了小贴纸奖励孩子，
