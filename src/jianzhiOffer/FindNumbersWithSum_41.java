@@ -14,6 +14,7 @@ public class FindNumbersWithSum_41 {
 		ArrayList<Integer> ans = new ArrayList<>();
 		if (array == null)
 			return ans;
+		//low 指数字中低位的元素 初始值为0;high指数组中高位的元素 初始值为len-1
 		int low = 0;
 		int high = array.length - 1;
 		while (low < high) {
