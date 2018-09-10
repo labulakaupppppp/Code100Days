@@ -18,9 +18,34 @@ public class LeftRotateString_42 {
 
 		return ans;
 	}
+	public static String LeftRotateString2(String s, int n) {
+		int len =s.length();
+		String ans = "";
+		if (s == null ||len == 0)
+			return ans;
+		char[] ch=s.toCharArray();
+		n = n % len;
+		reverse(ch,0,n-1);
+		reverse(ch,n,len-1);
+		reverse(ch,0,len-1);
+		ans = new String(ch);
+		System.out.println(ans);
+		return ans;
+		
+	}
+	private static void reverse(char[] s, int i, int j) {
+		while (i < j) {
+			swap(s, i++, j--);
+		}
+	}
 
+	private static void swap(char[] s, int i, int j) {
+		char temp = s[j];
+		s[j] = s[i];
+		s[i] = temp;
+	}
 	public static void main(String[] args) {
-		LeftRotateString("abcXYZdef", 3);
+		LeftRotateString2("abcXY  Zdef", 3);
 	}
 
 }
