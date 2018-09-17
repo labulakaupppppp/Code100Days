@@ -5,7 +5,8 @@ package jianzhiOffer;
  * 并将P对1000000007取模的结果输出。 即输出P%1000000007
  * 
  * @author miaoyumiao_i
- *
+ *思路：
+ *将数组分成子数组，先计算子数组中的逆序对数量，并排序；在计算相邻子数组之间的逆序对数量。加和
  */
 public class InversePairs_36 {
 	public static int inversePairs(int[] array) {
