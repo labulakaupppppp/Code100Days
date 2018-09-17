@@ -54,6 +54,7 @@ public class InversePairs_36 {
 		return (leftcount + rightcount + count) % 1000000007;
 	}
 	public static int inversePairs2(int[] array) {
+		//超时的解法
 		if (array.length <= 0 || array == null)
 			return 0;
 		int count=0;
