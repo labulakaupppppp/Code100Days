@@ -32,7 +32,7 @@ public class MaxInWindows {
 				deque.removeFirst();
 			}
 			deque.addLast(i);
-			if(i>=size-1)
+			if(i+1>=size)
 				list.add(num[deque.getFirst()]);
 		}
 		return list;
